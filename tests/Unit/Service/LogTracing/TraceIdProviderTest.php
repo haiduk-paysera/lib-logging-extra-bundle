@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Paysera\LoggingExtraBundle\Tests\Unit\LogTracing;
+namespace Paysera\LoggingExtraBundle\Tests\Unit\Service\LogTracing;
 
 use Paysera\LoggingExtraBundle\Service\LogTracing\TraceIdProvider;
 use PHPUnit\Framework\TestCase;
