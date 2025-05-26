@@ -21,5 +21,10 @@ class PayseraLoggingExtraExtension extends Extension
 
         $container->setParameter('paysera_logging_extra.application_name', $config['application_name']);
         $container->setParameter('paysera_logging_extra.grouped_exceptions', $config['grouped_exceptions']);
+
+        if ($config['log_tracing_enabled'] === true) {
+            $container->setParameter('paysera_logging_extra.trace_id_header', $config['trace_id_header']);
+            $loader->load('log_tracing.xml');
+        }
     }
 }

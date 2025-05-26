@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * @internal
- * 
+ *
  * Provides trace ID functionality for distributed tracing.
  * The trace ID is either retrieved from the request headers or generated as a UUID.
  */
@@ -21,10 +21,10 @@ class TraceIdProvider
 
     public function __construct(
         RequestStack $requestStack,
-        string $traceIdHeaderName
+        string $traceIdHeader
     ) {
         $this->requestStack = $requestStack;
-        $this->traceIdHeaderName = $traceIdHeaderName;
+        $this->traceIdHeaderName = $traceIdHeader;
         $this->traceId = null;
     }
 

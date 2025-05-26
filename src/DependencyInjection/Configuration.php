@@ -23,6 +23,9 @@ class Configuration implements ConfigurationInterface
         $children->scalarNode('application_name')->isRequired();
         $children->arrayNode('grouped_exceptions')->prototype('scalar');
 
+        $children->booleanNode('log_tracing_enabled')->defaultFalse();
+        $children->scalarNode('trace_id_header')->defaultValue('Paysera-Trace-Id');
+
         return $treeBuilder;
     }
 }
