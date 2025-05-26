@@ -15,12 +15,12 @@ class TraceIdHttpClientDecorator
 
     public function __construct(
         TraceIdProvider $traceIdProvider,
-        string $traceIdHeaderName,
-        HttpClientInterface $client
+        HttpClientInterface $client,
+        string $traceIdHeaderName
     ) {
         $this->traceIdProvider = $traceIdProvider;
-        $this->traceIdHeaderName = $traceIdHeaderName;
         $this->client = $client;
+        $this->traceIdHeaderName = $traceIdHeaderName;
     }
 
     public function request(string $method, string $url, array $options = []): ResponseInterface

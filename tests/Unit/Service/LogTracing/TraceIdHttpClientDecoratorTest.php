@@ -32,8 +32,8 @@ class TraceIdHttpClientDecoratorTest extends TestCase
 
         $this->decorator = new TraceIdHttpClientDecorator(
             $traceIdProvider,
-            self::TRACE_ID_HEADER,
-            $this->httpClient
+            $this->httpClient,
+            self::TRACE_ID_HEADER
         );
     }
 
